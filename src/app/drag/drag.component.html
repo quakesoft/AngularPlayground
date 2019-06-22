@@ -1,3 +1,15 @@
-<p>
-  drag works!
-</p>
+<div>
+  <div id='boundary'>
+    <div *ngFor="let item of items1; let i = index;" class="box" cdkDrag cdkDragBoundary="#boundary"
+      [ngStyle]="{'transform': 'translate(' + item.x + 'px, ' + item.y + 'px)'}">
+      {{item.c}}
+    </div>
+    <div cdkDrag cdkDragBoundary="#boundary" class='container'
+      [ngStyle]="{'transform': 'translate(' + cx + 'px, ' + cy + 'px)', 'width': cw + 'px', 'height': ch + 'px'}">
+      <div *ngFor="let item of items2; let i = index;" class="box2" cdkDragHandle
+        [ngStyle]="{'transform': 'translate(' + (item.x - cx) + 'px, ' + (item.y - cy) + 'px)'}">
+        {{item.c}}
+      </div>
+    </div>
+  </div>
+</div>
