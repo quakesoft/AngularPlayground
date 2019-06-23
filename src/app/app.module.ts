@@ -7,12 +7,14 @@ import { DragComponent } from './drag/drag.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { ImgeditComponent } from './imgedit/imgedit.component';
+import { LinksComponent } from './links/links.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DragComponent,
-    ImgeditComponent
+    ImgeditComponent,
+    LinksComponent
   ],
   imports: [
     BrowserModule,
